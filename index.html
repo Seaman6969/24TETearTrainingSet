@@ -135,12 +135,6 @@
 
             <button type="submit" class="btn" id="downloadBtn" disabled>Download</button>
         </form>
-
-        <div class="footer">
-            <a href="#">Source Code</a> · 
-            <a href="#">GitHub</a> · 
-            <a href="#">Changelog</a>
-        </div>
     </div>
 
     <script>
@@ -161,9 +155,7 @@
             
             const os = osSelect.value;
             const version = versionSelect.value;
-            
-            // Replace this with your actual download URL
-            const downloadUrl = `https://github.com/username/repo/releases/download/v${version}/software-${os}-v${version}.tar.gz`;
+            const downloadUrl = `https://github.com/Seaman6969/24TETearTrainingSet/releases/download/${version}/24TET_earTraining-x86_64.AppImage`;
             
             window.location.href = downloadUrl;
         });
