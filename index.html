@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Software · Linux Download</title>
+    <title>My Software</title>
     <style>
         * {
             margin: 0;
@@ -18,73 +18,69 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 2rem 1rem;
-            color: #24292f;
+            padding: 1rem;
         }
 
         .container {
-            max-width: 640px;
-            width: 100%;
-            background: #ffffff;
-            border-radius: 12px;
+            background: white;
             padding: 3rem 2.5rem;
+            border-radius: 12px;
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-            text-align: center;
+            max-width: 450px;
+            width: 100%;
         }
 
         h1 {
             font-size: 2rem;
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: 0.25rem;
-            letter-spacing: -0.02em;
         }
 
         .subtitle {
-            font-size: 1rem;
             color: #57606a;
             margin-bottom: 2rem;
+            font-size: 0.95rem;
         }
 
-        .version-badge {
-            display: inline-block;
-            background: #eaeef2;
-            padding: 0.2rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            color: #57606a;
-            margin-bottom: 2rem;
-        }
-
-        .download-card {
-            background: #f6f8fa;
-            border: 1px solid #d0d7de;
-            border-radius: 10px;
-            padding: 2rem 1.5rem;
-        }
-
-        .download-card h2 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-        }
-
-        .download-card .platform-detail {
-            font-size: 0.85rem;
-            color: #57606a;
+        .form-group {
             margin-bottom: 1.5rem;
         }
 
-        .btn {
-            display: inline-block;
-            background: #2da44e;
-            color: white;
-            font-weight: 600;
+        label {
+            display: block;
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 0.4rem;
+            color: #24292f;
+        }
+
+        select {
+            width: 100%;
+            padding: 0.7rem 1rem;
             font-size: 1rem;
-            padding: 0.7rem 2.5rem;
-            border-radius: 30px;
-            text-decoration: none;
-            border: 1px solid #2c974b;
+            border: 1px solid #d0d7de;
+            border-radius: 8px;
+            background: white;
+            color: #24292f;
+            cursor: pointer;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #2da44e;
+            box-shadow: 0 0 0 3px rgba(45, 164, 78, 0.15);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: white;
+            background: #2da44e;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
             transition: background 0.15s;
         }
 
@@ -92,62 +88,16 @@
             background: #2c974b;
         }
 
-        .btn-secondary {
-            background: #f6f8fa;
-            color: #24292f;
-            border: 1px solid #d0d7de;
-            font-weight: 500;
-            font-size: 0.85rem;
-            padding: 0.4rem 1.2rem;
-        }
-
-        .btn-secondary:hover {
-            background: #eaeef2;
-        }
-
-        .alt-formats {
-            margin-top: 1rem;
-            display: flex;
-            gap: 0.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .checksum {
-            margin-top: 1rem;
-            font-size: 0.75rem;
-            color: #57606a;
-            background: #ffffff;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            font-family: monospace;
-            word-break: break-all;
-            border: 1px solid #eaeef2;
-        }
-
-        .source-section {
-            margin-top: 2rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #eaeef2;
-        }
-
-        .source-section p {
-            color: #57606a;
-            font-size: 0.9rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .source-links {
-            display: flex;
-            justify-content: center;
-            gap: 0.8rem;
-            flex-wrap: wrap;
+        .btn:disabled {
+            background: #d0d7de;
+            cursor: not-allowed;
         }
 
         .footer {
-            margin-top: 2rem;
+            margin-top: 1.5rem;
             font-size: 0.75rem;
             color: #8b949e;
+            text-align: center;
         }
 
         .footer a {
@@ -158,61 +108,70 @@
         .footer a:hover {
             text-decoration: underline;
         }
-
-        @media (max-width: 500px) {
-            .container {
-                padding: 2rem 1.2rem;
-            }
-            h1 {
-                font-size: 1.6rem;
-            }
-            .btn {
-                width: 100%;
-            }
-        }
     </style>
 </head>
 <body>
 
     <div class="container">
-
         <h1>My Software</h1>
-        <p class="subtitle">Simple, fast, and open source</p>
+        <p class="subtitle">Download the latest version</p>
 
-        <div class="version-badge">Latest Release · v1.0.0</div>
-
-        <div class="download-card">
-            <h2>Linux</h2>
-            <div class="platform-detail">x86_64 · AppImage (glibc 2.28+)</div>
-
-            <a href="#" class="btn">Download AppImage</a>
-
-            <div class="alt-formats">
-                <a href="#" class="btn btn-secondary">deb</a>
-                <a href="#" class="btn btn-secondary">rpm</a>
-                <a href="#" class="btn btn-secondary">tar.gz</a>
+        <form id="downloadForm">
+            <div class="form-group">
+                <label for="os">Operating System</label>
+                <select id="os" required>
+                    <option value="">Select OS...</option>
+                    <option value="linux">Linux</option>
+                    <option value="macos">macOS</option>
+                    <option value="windows">Windows</option>
+                </select>
             </div>
 
-            <div class="checksum">
-                SHA256: d3b07384d113edec49eaa6238ad5ff00
+            <div class="form-group">
+                <label for="version">Version</label>
+                <select id="version" required>
+                    <option value="">Select version...</option>
+                    <option value="2.1.0">v2.1.0 (Latest)</option>
+                    <option value="2.0.0">v2.0.0</option>
+                    <option value="1.9.0">v1.9.0</option>
+                </select>
             </div>
-        </div>
 
-        <div class="source-section">
-            <p>Source Code · MIT License</p>
-            <div class="source-links">
-                <a href="#" class="btn btn-secondary">Browse on GitHub</a>
-                <a href="#" class="btn btn-secondary">Download ZIP</a>
-            </div>
-        </div>
+            <button type="submit" class="btn" id="downloadBtn" disabled>Download</button>
+        </form>
 
         <div class="footer">
-            <a href="#">GitHub Pages</a> · 
-            <a href="#">Report Issue</a> · 
+            <a href="#">Source Code</a> · 
+            <a href="#">GitHub</a> · 
             <a href="#">Changelog</a>
         </div>
-
     </div>
+
+    <script>
+        const form = document.getElementById('downloadForm');
+        const osSelect = document.getElementById('os');
+        const versionSelect = document.getElementById('version');
+        const downloadBtn = document.getElementById('downloadBtn');
+
+        function checkForm() {
+            downloadBtn.disabled = !(osSelect.value && versionSelect.value);
+        }
+
+        osSelect.addEventListener('change', checkForm);
+        versionSelect.addEventListener('change', checkForm);
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const os = osSelect.value;
+            const version = versionSelect.value;
+            
+            // Replace this with your actual download URL
+            const downloadUrl = `https://github.com/username/repo/releases/download/v${version}/software-${os}-v${version}.tar.gz`;
+            
+            window.location.href = downloadUrl;
+        });
+    </script>
 
 </body>
 </html>
